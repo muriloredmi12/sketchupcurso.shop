@@ -17,7 +17,7 @@
   <div class="container">
     <div class="cta">
       <h2>Transforme suas habilidades em 3D</h2>
-      <p>Aprenda como funciona e como fazer para configurar o SketchUp como um profissional com nossas 3 aulas grauitas. Acesse agora e comece a criar projetos incríveis!</p>
+      <p>Aprenda como funciona e como fazer para configurar o SketchUp como um profissional com nossas 3 aulas gratuitas. Acesse agora e comece a criar projetos incríveis!</p>
       
       <!-- Formulário de Captura de E-mail -->
       <form id="email-form" action="https://script.google.com/macros/s/AKfycbyAmbdR5uxv9bH1tapJKukZyuGmMFx6qLwgUHrh7-oFx0jNxoMErs2CR6qL8Tq8nT3cVA/exec" method="POST">
@@ -46,6 +46,29 @@
             cookieMessage.style.display = 'none';
           });
         }
+
+        // Redirecionamento após o envio do formulário
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+          e.preventDefault(); // Impede o envio padrão do formulário
+
+          // Envio do formulário via Fetch API
+          fetch(this.action, {
+            method: 'POST',
+            body: new URLSearchParams(new FormData(this))
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "success") {
+              window.location.href = "URL_DA_PAGINA_DE_DESTINO"; // Substitua pela URL da página de destino
+            } else {
+              alert('Erro ao registrar o e-mail. Tente novamente.'); // Mensagem de erro
+            }
+          })
+          .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao registrar o e-mail. Tente novamente.'); // Mensagem de erro
+          });
+        });
       </script>
       
       <a href="https://link-de-afiliado.com" target="_blank">Descubra Mais Sobre o Curso</a>
@@ -58,4 +81,5 @@
 
 </body>
 </html>
+
 
