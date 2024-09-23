@@ -1,94 +1,138 @@
+/* Fonte e estrutura base */
 body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .cta {
-      background-color: #ffcc00;
-      text-align: center;
-      padding: 40px;
-      margin: 20px 0;
-    }
-    .cta h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .cta p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-    .cta a {
-      text-decoration: none;
-      color: #fff;
-      background-color: #0073e6;
-      padding: 15px 30px;
-      border-radius: 5px;
-      font-size: 1.2em;
-    }
-    .cta a:hover {
-      background-color: #005bb5;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-    }
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fa;
+  color: #333;
+  line-height: 1.6;
+}
 
+/* Container geral */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2b3a42;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Seção de chamada para ação */
+.cta {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px;
+  margin: 30px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.cta h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #0073e6;
+}
+
+.cta p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+/* Botão principal */
+.cta a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0073e6;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: #005bb5;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2b3a42;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Notificação de cookies */
 .CookieMessage {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #121212;
-    z-index: 999;
-    display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #121212;
+  z-index: 999;
+  display: none;
+  padding: 15px 20px;
+}
+
+.CookieMessage-content {
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.CookieMessage-content a {
+  color: #00C2FF;
+}
+
+.CookieMessage-button {
+  background: #00C2FF;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.CookieMessage-button:hover {
+  background: #5cd9ff;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .cta h2 {
+    font-size: 1.8em;
   }
-  
-  .CookieMessage-content {
-    color: white;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 20px 0 20px;
-    font-family: sans-serif;
-    line-height: 1.5;
-    font-size: 12px;
+
+  .cta p {
+    font-size: 1em;
   }
-  .CookieMessage-content a{
-    color: white;
+
+  .cta a {
+    font-size: 1em;
+    padding: 12px 30px;
   }
-  .CookieMessage-content p{
-    margin: 0 0 20px 0;
-  }
-  
-  .CookieMessage-button {
-    background: #00C2FF;
-    display: inline-block;
-    text-decoration: none;
-    padding: 5px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-  
-  }
-  .CookieMessage-button:hover{
-    background: #5cd9ff;
-  }
+}
+
