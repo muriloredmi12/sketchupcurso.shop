@@ -4,47 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Aprenda SketchUp - Curso Completo</title>
-  <meta name="description" content="Descubra como dominar o SketchUp com o curso completo. Cadastre-se agora para assistir gratuitamente a 3 super aulas!">
+  <title>Aprenda SketchUp - Curso Completo e Gratuito</title>
+  <meta name="description" content="Aprenda SketchUp e transforme suas ideias em projetos 3D incríveis com nossas 3 aulas gratuitas. Cadastre-se agora!">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Domine o SketchUp com Nosso Curso Completo!</h1>
+    <h1>Aprenda SketchUp e Transforme Suas Ideias em Projetos 3D Incríveis</h1>
   </header>
+
   <div class="container">
     <div class="cta">
-      <h2>Transforme suas habilidades em 3D</h2>
+      <h2>Cadastre-se Agora e Acesse 3 Aulas Grátis para Dominar o SketchUp</h2>
+
+      <!-- Notificação de cookies -->
       <div id="cookie-notification" class="CookieMessage" style="display: none;">
         <div class="CookieMessage-content"> 
-          <p>Este site utiliza cookies de navegação para a melhor experiência do usuário. <a href="https://exemplo/politicas-de-privacidade">Saiba mais</a></p>
+          <p>Este site utiliza cookies para melhorar a sua experiência. <a href="https://exemplo/politicas-de-privacidade">Saiba mais</a></p>
           <p><a id="cookie-notification-close" class="CookieMessage-button" href="#">Aceitar</a></p>          
         </div>
       </div>
-    <script>
-        if (!localStorage.getItem("cookiesAccepted")) { 
-        var cookieMessage = document.getElementById('cookie-notification');  
-        var closeCookie = document.getElementById('cookie-notification-close');
-        
-        cookieMessage.style.display = 'block';  
-        closeCookie.addEventListener("click", function(e) {  
-          e.preventDefault();
-          localStorage.setItem("cookiesAccepted", true);
-          
-          cookieMessage.style.display = 'none';
-        });
-      }
-      
-    </script>
-      <p>Aprenda a utilizar o SketchUp como um profissional com nosso curso completo. Acesse agora e comece a criar projetos incríveis!</p>
-      <a href="https://link-de-afiliado.com" target="_blank">Quero Fazer Parte</a>
+
+      <p>Descubra os segredos do SketchUp com nossas aulas gratuitas! Domine ferramentas, técnicas e crie projetos reais do zero. Inscreva-se e comece agora!</p>
+
+      <!-- Botão CTA -->
+      <a href="https://link-de-afiliado.com" target="_blank">Acessar Minhas 3 Aulas Grátis</a>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2024 SketchUp Curso. Todos os direitos reservados.</p>
+    <p>&copy; 2024 SketchUp Curso. Todos os direitos reservados. <a href="#">Termos de uso</a> | <a href="#">Política de privacidade</a></p>
   </footer>
+
+  <script>
+    if (!localStorage.getItem("cookiesAccepted")) { 
+      var cookieMessage = document.getElementById('cookie-notification');  
+      var closeCookie = document.getElementById('cookie-notification-close');
+      
+      cookieMessage.style.display = 'block';  
+      closeCookie.addEventListener("click", function(e) {  
+        e.preventDefault();
+        localStorage.setItem("cookiesAccepted", true);
+        
+        cookieMessage.style.display = 'none';
+      });
+    }
+  </script>
 
 </body>
 </html>
