@@ -6,16 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Aprenda SketchUp - Curso Completo</title>
   <meta name="description" content="Descubra como dominar o SketchUp com o curso completo. Cadastre-se agora para assistir gratuitamente a 3 super aulas!">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <h1>Domine o SketchUp com Nosso Curso Completo!</h1>
   </header>
-
   <div class="container">
     <div class="cta">
       <h2>Transforme suas habilidades em 3D</h2>
+      <div id="cookie-notification" class="CookieMessage" style="display: none;">
+        <div class="CookieMessage-content"> 
+          <p>Este site utiliza cookies de navegação para a melhor experiência do usuário. <a href="https://exemplo/politicas-de-privacidade">Saiba mais</a></p>
+          <p><a id="cookie-notification-close" class="CookieMessage-button" href="#">Aceitar</a></p>          
+        </div>
+      </div>
+    <script>
+        if (!localStorage.getItem("cookiesAccepted")) { 
+        var cookieMessage = document.getElementById('cookie-notification');  
+        var closeCookie = document.getElementById('cookie-notification-close');
+        
+        cookieMessage.style.display = 'block';  
+        closeCookie.addEventListener("click", function(e) {  
+          e.preventDefault();
+          localStorage.setItem("cookiesAccepted", true);
+          
+          cookieMessage.style.display = 'none';
+        });
+      }
+      
+    </script>
       <p>Aprenda a utilizar o SketchUp como um profissional com nosso curso completo. Acesse agora e comece a criar projetos incríveis!</p>
       <a href="https://link-de-afiliado.com" target="_blank">Quero Fazer Parte</a>
     </div>
