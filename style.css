@@ -1,14 +1,12 @@
-/* Fonte e estrutura base */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f8fa;
+  background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-/* Container geral */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -16,71 +14,95 @@ body {
   padding: 20px;
 }
 
-/* Cabeçalho */
 header {
-  background-color: #2b3a42;
+  background-color: #333;
   color: #fff;
-  padding: 15px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5em;
-  font-weight: bold;
 }
 
-/* Seção de chamada para ação */
 .cta {
-  background-color: #fff;
+  background-color: #ffcc00;
   text-align: center;
-  padding: 50px;
-  margin: 30px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 10px;
 }
 
 .cta h2 {
   font-size: 2em;
-  margin-bottom: 15px;
-  color: #0073e6;
+  margin-bottom: 10px;
 }
 
 .cta p {
   font-size: 1.2em;
-  margin-bottom: 25px;
-  color: #666;
+  margin-bottom: 20px;
 }
 
-/* Botão principal */
 .cta a {
   text-decoration: none;
   color: #fff;
   background-color: #0073e6;
-  padding: 15px 40px;
-  border-radius: 50px;
+  padding: 15px 30px;
+  border-radius: 5px;
   font-size: 1.2em;
-  transition: background-color 0.3s ease;
 }
 
 .cta a:hover {
   background-color: #005bb5;
 }
 
-/* Rodapé */
+/* Estilo do Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+form label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+form input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0073e6;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2b3a42;
+  background-color: #333;
   color: #fff;
-  font-size: 0.9em;
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Notificação de cookies */
+/* Estilo da Notificação de Cookies */
 .CookieMessage {
   position: fixed;
   bottom: 0;
@@ -89,50 +111,35 @@ footer p {
   background: #121212;
   z-index: 999;
   display: none;
-  padding: 15px 20px;
 }
 
 .CookieMessage-content {
   color: white;
   max-width: 900px;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  padding: 20px 20px 0 20px;
+  font-family: sans-serif;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .CookieMessage-content a {
-  color: #00C2FF;
+  color: white;
+}
+
+.CookieMessage-content p {
+  margin: 0 0 20px 0;
 }
 
 .CookieMessage-button {
   background: #00C2FF;
   display: inline-block;
   text-decoration: none;
-  padding: 8px 20px;
-  border-radius: 25px;
+  padding: 5px 20px;
+  border-radius: 5px;
   text-transform: uppercase;
-  font-size: 12px;
-  transition: background-color 0.3s ease;
 }
 
 .CookieMessage-button:hover {
   background: #5cd9ff;
 }
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-  .cta h2 {
-    font-size: 1.8em;
-  }
-
-  .cta p {
-    font-size: 1em;
-  }
-
-  .cta a {
-    font-size: 1em;
-    padding: 12px 30px;
-  }
-}
-
