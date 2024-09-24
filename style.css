@@ -40,6 +40,10 @@ header h1 {
   border-radius: 8px;
 }
 
+.cta:hover {
+  background-color: #005bb5;
+}
+
 .cta h2 {
   font-size: 2em;
   margin-bottom: 15px;
