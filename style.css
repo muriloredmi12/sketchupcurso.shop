@@ -273,3 +273,17 @@ footer {
   height: auto; /* Mantém a proporção da altura */
 }
 
+  button2 {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0073e6;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button2:hover {
+    background-color: #005bb5; /* Cor mais escura no hover */
+}
+
