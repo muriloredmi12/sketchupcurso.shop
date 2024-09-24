@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Descubra o que é possível fazer com Sketchup</title>
+  <link rel="icon" href="2.png" type="image/png">
+  <meta name="description" content="Curiosidades e Possibilidades com o SketchUp: Explorando o Mundo do Design 3D">
+  <link rel="stylesheet" href="style.css">
+    <iframe style="opacity: 0;" src="https://go.hotmart.com/C95649497R" width="1" height="1" scrolling="no"></iframe>
+</head>
+<body>
+
+  <header>
+    <h1>Curiosidades e Possibilidades com o SketchUp:<br>Descubra além do óbvio</h1>
+  </header>
+  
+      <div class="container">
+    <div class="cta">
+      <h2>Tenha acesso exclusivo a 3 aulas práticas</h2>
+      <img src="IMG_3410.webp" alt="Sketchup logo" class="imagem-limitada">
+      <p>Você já sabe o básico.<br>Agora é hora de descobrir como um profissional trabalha. Assista agora a essas 3 aulas que liberamos.<br>*No ar por tempo limitado.</p>
+      
+      <!-- Formulário de Captura de E-mail -->
+      <form id="email-form" action="https://script.google.com/macros/s/AKfycbyAmbdR5uxv9bH1tapJKukZyuGmMFx6qLwgUHrh7-oFx0jNxoMErs2CR6qL8Tq8nT3cVA/exec" method="POST">
+         <div class="email-capture">
+        <input type="email" id="email" name="email" placeholder="Seu e-mail principal" required>
+        <p><button type="submit" class="cta a" style="text-decoration: none; color: #fff; background-color: #0073e6; padding: 15px 40px; border-radius: 50px; font-size: 1.2em; transition: background-color 0.3s ease;">Quero Assistir Agora</button></p>
+      </form>
+
+      <!-- Mensagem de carregamento -->
+      <p id="loading-message" style="display:none; text-align:center; font-size:1.9em; color:#0073e6;">Preparando suas aulas... Por favor, aguarde.</p>
+      
+      <h4 class="disclaimer">Prometemos não enviar spam.</h4>
+
+      <!-- Notificação de Cookies -->
+      <div id="cookie-notification" class="CookieMessage" style="display: none;">
+        <div class="CookieMessage-content">
+          <p>Este site utiliza cookies para melhorar sua experiência.</p>
+          <p><a id="cookie-notification-close" class="CookieMessage-button" href="#">Aceitar</a></p>
+          <p><a href="privacidade.html" class="CookieMessage-button" target="_blank">Saiba mais</a></p>
+        </div>
+      </div>
+
+      <script>
+        if (!localStorage.getItem("cookiesAccepted")) {
+          var cookieMessage = document.getElementById('cookie-notification');
+          var closeCookie = document.getElementById('cookie-notification-close');
+
+          cookieMessage.style.display = 'block';
+          closeCookie.addEventListener("click", function(e) {
+            e.preventDefault();
+            localStorage.setItem("cookiesAccepted", true);
+            cookieMessage.style.display = 'none';
+          });
+        }
+
+        // Redirecionamento após o envio do formulário
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+          e.preventDefault(); // Impede o envio padrão do formulário
+
+          // Exibir a mensagem de carregamento
+          var loadingMessage = document.getElementById('loading-message');
+          loadingMessage.style.display = 'block';
+
+          // Desabilitar o botão de envio para evitar múltiplos cliques
+          var submitButton = document.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+
+          // Envio do formulário via Fetch API
+          fetch(this.action, {
+            method: 'POST',
+            body: new URLSearchParams(new FormData(this))
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === "success") {
+              window.location.href = "https://go.hotmart.com/C95649497R?ap=eaf6";
+            } else {
+              alert('Erro ao registrar o e-mail. Tente novamente.');
+            }
+          })
+          .catch(error => {
+            console.error('Erro:', error);
+            alert('Erro ao registrar o e-mail. Tente novamente.');
+          })
+          .finally(() => {
+            // Ocultar a mensagem de carregamento e reativar o botão em caso de erro ou sucesso
+            loadingMessage.style.display = 'none';
+            submitButton.disabled = false;
+          });
+        });
+      </script>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 SketchUp Curso. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
