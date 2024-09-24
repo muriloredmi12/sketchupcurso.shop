@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Aprenda SketchUp - Curso Completo</title>
   <link rel="icon" href="2.png" type="image/png">
-  <meta name="description" content="Domine o SketchUp com nosso curso completo. Insira seu melhor e-mail e assista agora a 3 super aulas de Sketchup!">
+  <meta name="description" content="Domine o SketchUp com nosso curso completo. Insira seu melhor e-mail e assista agora a 3 super aulas de SketchUp!">
   <link rel="stylesheet" href="style.css">
-    <iframe style="opacity: 0;" src="https://go.hotmart.com/C95649497R" width="1" height="1" scrolling="no"></iframe>
+  <iframe style="opacity: 0;" src="https://go.hotmart.com/C95649497R" width="1" height="1" scrolling="no"></iframe>
 </head>
 <body>
 
@@ -16,18 +16,35 @@
     <h1>Domine o SketchUp hoje mesmo</h1>
   </header>
   
-      <div class="container">
+  <div class="container">
     <div class="cta">
       <h2>Tenha acesso exclusivo a 3 aulas práticas</h2>
       <img src="IMG_3410.webp" alt="Sketchup logo">
       <p>Você já sabe o básico, agora é hora de descobrir como um profissional trabalha.<br>Assista agora a essas 3 aulas que liberamos! *No ar por tempo limitado.</p>
       
-      <button class="openModal" style="text-decoration: none; color: #fff; background-color: #0073e6; padding: 15px 40px; border-radius: 50px; font-size: 1.2em;">Assista Agora 3 Aulas<br>Gratuitas de Sketchup</button>
+      <button class="openModal" style="text-decoration: none; color: #fff; background-color: #0073e6; padding: 15px 40px; border-radius: 50px; font-size: 1.2em;">Assista Agora 3 Aulas<br>Gratuitas de SketchUp</button>
 
       <!-- Mensagem de carregamento -->
-      <p id="loading-message" style="display:none; text-align:center; font-size:1.9em; color:#0073e6;">Preparando suas aulas... Por favor, aguarde.</p>
+      <p id="loading-message-main" style="display:none; text-align:center; font-size:1.9em; color:#0073e6;">Preparando suas aulas... Por favor, aguarde.</p>
       
       <h4 class="disclaimer">Prometemos não enviar spam.</h4>
+
+      <!-- Modal -->
+      <div id="emailModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <h2>Por tempo limitado:<br>3 (três) aulas completas gratuitas</h2>
+          <form id="email-form" action="https://script.google.com/macros/s/AKfycbyAmbdR5uxv9bH1tapJKukZyuGmMFx6qLwgUHrh7-oFx0jNxoMErs2CR6qL8Tq8nT3cVA/exec" method="POST">
+            <div class="email-capture">
+              <input type="email" id="email" name="email" placeholder="Preencha com seu melhor email para liberar as aulas" required>
+              <br>
+              <button type="submit">Enviar e Assistir Agora</button>
+            </div>
+          </form>
+          <!-- Mensagem de carregamento do modal -->
+          <p id="modal-loading-message" style="display:none; text-align:center; font-size:1.5em; color:#0073e6;">Ok! Estamos preparando suas aulas... Por favor, aguarde.</p>
+        </div>
+      </div>
 
       <!-- Notificação de Cookies -->
       <div id="cookie-notification" class="CookieMessage" style="display: none;">
@@ -38,7 +55,9 @@
         </div>
       </div>
 
+      <!-- Scripts -->
       <script>
+        // Exibir a notificação de cookies
         if (!localStorage.getItem("cookiesAccepted")) {
           var cookieMessage = document.getElementById('cookie-notification');
           var closeCookie = document.getElementById('cookie-notification-close');
@@ -51,59 +70,36 @@
           });
         }
 
- <!-- Modal -->
-  <div id="emailModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Por tempo limitado:<br>3 (três) aulas completas gratuitas</h2>
-      <form id="email-form" action="https://script.google.com/macros/s/AKfycbyAmbdR5uxv9bH1tapJKukZyuGmMFx6qLwgUHrh7-oFx0jNxoMErs2CR6qL8Tq8nT3cVA/exec" method="POST">
-        <div class="email-capture">
-          <input type="email" id="email" name="email" placeholder="Preencha com seu melhor email<br>para liberar as aulas" required>
-          <br>
-          <button type="submit">Enviar e Assistir Agora</button>
-        </div>
-      </form>
-      <!-- Mensagem de carregamento -->
-      <p id="loading-message" style="display:none; text-align:center; font-size:1.5em; color:#0073e6;">Ok! Estamos preparando suas aulas... Por favor, aguarde.</p>
-    </div>
-  </div>
+        // Exibir a modal
+        var modal = document.getElementById("emailModal");
+        var buttons = document.querySelectorAll(".openModal"); // Seleciona todos os botões com a classe "openModal"
+        var closeModal = document.getElementById("closeModal");
 
-  <footer>
-    <p>&copy; 2024 SketchUp Curso. Todos os direitos reservados.</p>
-  </footer>
+        // Para cada botão, adicionar o evento de clique para abrir a modal
+        buttons.forEach(function(button) {
+          button.onclick = function() {
+            modal.style.display = "block";
+          }
+        });
 
-  <script>
-    // Exibir a modal
-    var modal = document.getElementById("emailModal");
-    var buttons = document.querySelectorAll(".openModal"); // Seleciona todos os botões com a classe "openModal"
-    var span = document.getElementsByClassName("close")[0];
+        // Fechar a modal ao clicar no "X"
+        closeModal.onclick = function() {
+          modal.style.display = "none";
+        }
 
-    // Para cada botão, adicionar o evento de clique para abrir a modal
-    buttons.forEach(function(button) {
-      button.onclick = function() {
-        modal.style.display = "block";
-      }
-    });
+        // Fechar a modal ao clicar fora dela
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
 
-    // Fechar a modal ao clicar no "X"
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // Fechar a modal ao clicar fora dela
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-        
         // Redirecionamento após o envio do formulário
         document.getElementById('email-form').addEventListener('submit', function(e) {
           e.preventDefault(); // Impede o envio padrão do formulário
 
           // Exibir a mensagem de carregamento
-          var loadingMessage = document.getElementById('loading-message');
+          var loadingMessage = document.getElementById('modal-loading-message');
           loadingMessage.style.display = 'block';
 
           // Desabilitar o botão de envio para evitar múltiplos cliques
@@ -134,7 +130,6 @@
           });
         });
       </script>
-
     </div>
   </div>
 
